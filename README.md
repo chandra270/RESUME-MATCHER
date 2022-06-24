@@ -4,8 +4,6 @@ A Machine Learning Based Resume Matcher, to compare Resumes with Job Description
 Create a score based on how good/similar a resume is to the particular Job Description.\n
 Documents are sorted based on Their TF-IDF Scores (Term Frequency-Inverse Document Frequency)
 
-Check the live version [here](https://share.streamlit.io/srbhr/naive-resume-matching/app.py). _The instance might sleep if not used in a long time, so in such cases drop me a mail or fork this repo and launch your own instance at [Streamlit's Cloud Instance](https://streamlit.io/)_
-
 Matching Algorihms used are :-
 
 - **String Matching**
@@ -26,34 +24,6 @@ For this :-
 2. id2word, and doc2word algorithms are used on the Documents (from Gensim Library).
 3. [LDA](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) (Latent Dirichlet Allocation) is done to extract the Topics from the Document set.(In this case Resumes)
 4. Additional Plots are done to gain more insights about the document.
-
----
-## Images
-
-1. List of Job Descriptions to Choose from.
-![List of Job Descriptions to choose from](Screenshots/1.png)
-
-2. Preview of your Chosen Job Description
-![The Job Description](Screenshots/2.png)
-
-3. Your Resumes are ranked now! Check the top Ones!! 
-![Ranked Resumes as per Job Description](Screenshots/3.png)
-
-4. Score distribution of different candidates incase you want to check some more.
-![Score distribution of different candidates](Screenshots/4.png)
-
-5. Topic Disctribution of Various Resumes
-![Topic Disctribution of Various Resumes](Screenshots/5.png)
-
-
-6. Topic Distribution Sunburst Chart
-![Topic Distribution Sunburst Chart](Screenshots/6.png)
-
-7. Word Cloud of your resume for a quick glance! 
-![Word Cloud of your resume for a quick glance! ](Screenshots/7.png)
-
-## Preview
-![Working Video](Screenshots/Gif_View.gif)
 ---
 
 ## Progress Flow
@@ -75,41 +45,4 @@ Due the flexibility of Textract we need not to provide the type of document it n
 
 But for the Job Description it needs to be in Docx format, it can be changed as well.
 
-## Installation Instructions
 
-A python virtual environment is required for this. Please read this [page](https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/) for more information.
-
-A pip [requirements.txt](requirements.txt) file is provided. It is advised to install the packages listed below, manually by doing `pip install <package_name>`.
-As the requirements.txt file may have some unecessary additional dependencies.
-
-Popular Packages used are:-
-
-- [Spacy](https://pypi.org/project/spacy/)
-- [Plotly](https://pypi.org/project/plotly/)
-- [Streamlit](https://pypi.org/project/streamlit/)
-- [Gensim](https://pypi.org/project/gensim/)
-- [Scikit Learn](https://pypi.org/project/scikit-learn/)
-- [Pandas](https://pypi.org/project/pandas/)
-- [Wordcloud](https://pypi.org/project/wordcloud/)
-- [Matplotlib](https://pypi.org/project/matplotlib/)
-- [Numpy](https://pypi.org/project/numpy/)
-- [Scipy](https://pypi.org/project/scipy/)
-- [NLTK](https://pypi.org/project/nltk/)
-- [Textract](https://pypi.org/project/textract/)
-- [Textdistance](https://pypi.org/project/textdistance/)
-
-Furthermore the packages like NLTK and Spacy requires additional data to be downloaded.
-After installing them please perform:-
-
-```python
-## For Spacy's English Package
-python -m spacy download en_core_web_sm
-
-## For NLTK Data
-import nltk
-nltk.download('popular')  # this downloads the popular packages from NLTK_DATA
-```
-
-## Execution Instructions
-
-Please check the [How To](Howtorunthis.md) file for execution instructions.
